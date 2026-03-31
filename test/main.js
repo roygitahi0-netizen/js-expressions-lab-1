@@ -1,59 +1,91 @@
-//Calculating Averagev Temperature in city Of Rome Over 30 Days with each data provided in farneheit and celsius.
-//Defining the Temperature Data
-const celsiusTemps = [25, 18, 15, 28, 20, 23, 30, 22, 24, 21, 27, 19, 26, 17, 29];
-const fahrenheitTemps = [32, 70, 80, 72, 68, 75, 82, 65, 77, 78, 73, 79, 71, 74, 76];
+// Day temperature data
+let day1TempF = 32;
+let day2TempC = 25;
+let day3TempF = 70;
+let day4TempC = 18;
+let day5TempF = 80;
+let day6TempC = 15;
+let day7TempF = 72;
+let day8TempC = 28;
+let day9TempF = 68;
+let day10TempC = 20;
+let day11TempF = 75;
+let day12TempC = 23;
+let day13TempF = 82;
+let day14TempC = 30;
+let day15TempF = 65;
+let day16TempC = 22;
+let day17TempF = 77;
+let day18TempC = 26;
+let day19TempF = 78;
+let day20TempC = 24;
+let day21TempF = 73;
+let day22TempC = 21;
+let day23TempF = 79;
+let day24TempC = 27;
+let day25TempF = 71;
+let day26TempC = 19;
+let day27TempF = 74;
+let day28TempC = 17;
+let day29TempF = 76;
+let day30TempC = 29;
 
-// Creating variables to represent data listed for each day in both celsius and fahrenheit
-day1TempF = 32;
-day2TempC = 25;
-day3TempF = 70;
-day4TempC = 18;
-day5TempF = 80;
-day6TempC = 15;
-day7TempF = 72;
-day8TempC = 28;
-day9TempF = 68;
-day10TempC = 20;
-day11TempF = 75;
-day12TempC = 23;
-day13TempF = 82;    
-day14TempC = 30;
-day15TempF = 65;
-day16TempC = 22;
-day17TempF = 77;
-day18TempC = 24;
-day19TempF = 78;
-day20TempC = 21;
-day21TempF = 73;
-day22TempC = 27;
-day23TempF = 79;
-day24TempC = 19;
-day25TempF = 71;
-day26TempC = 26;
-day27TempF = 74;
-day28TempC = 17;
-day29TempF = 76;
-day30TempC = 29;
+// Convert all Celsius days to Fahrenheit
+let day2TempF = (day2TempC * 9 / 5) + 32;
+let day4TempF = (day4TempC * 9 / 5) + 32;
+let day6TempF = (day6TempC * 9 / 5) + 32;
+let day8TempF = (day8TempC * 9 / 5) + 32;
+let day10TempF = (day10TempC * 9 / 5) + 32;
+let day12TempF = (day12TempC * 9 / 5) + 32;
+let day14TempF = (day14TempC * 9 / 5) + 32;
+let day16TempF = (day16TempC * 9 / 5) + 32;
+let day18TempF = (day18TempC * 9 / 5) + 32;
+let day20TempF = (day20TempC * 9 / 5) + 32;
+let day22TempF = (day22TempC * 9 / 5) + 32;
+let day24TempF = (day24TempC * 9 / 5) + 32;
+let day26TempF = (day26TempC * 9 / 5) + 32;
+let day28TempF = (day28TempC * 9 / 5) + 32;
+let day30TempF = (day30TempC * 9 / 5) + 32;
 
-// Data Conversions
-const celsiusTempsToFahrenheit = celsiusTemps.map(temp => ((temp * 9 / 5) + 32));
-const fahrenheitTempsToCelsius = fahrenheitTemps.map(temp => ((temp - 32) * 5 / 9));
-//Sum of all the temperatures by creating two variables
-let tot_temperature_in_fahrenheit = 0;
-let tot_temperature_in_celsius = 0;
+// Convert all Fahrenheit days to Celsius
+let day1TempC = (day1TempF - 32) * 5 / 9;
+let day3TempC = (day3TempF - 32) * 5 / 9;
+let day5TempC = (day5TempF - 32) * 5 / 9;
+let day7TempC = (day7TempF - 32) * 5 / 9;
+let day9TempC = (day9TempF - 32) * 5 / 9;
+let day11TempC = (day11TempF - 32) * 5 / 9;
+let day13TempC = (day13TempF - 32) * 5 / 9;
+let day15TempC = (day15TempF - 32) * 5 / 9;
+let day17TempC = (day17TempF - 32) * 5 / 9;
+let day19TempC = (day19TempF - 32) * 5 / 9;
+let day21TempC = (day21TempF - 32) * 5 / 9;
+let day23TempC = (day23TempF - 32) * 5 / 9;
+let day25TempC = (day25TempF - 32) * 5 / 9;
+let day27TempC = (day27TempF - 32) * 5 / 9;
+let day29TempC = (day29TempF - 32) * 5 / 9;
 
-return tot_temperature_in_fahrenheit = celsiusTempsToFahrenheit.reduce((sum, temp) => sum + temp, 0) + fahrenheitTemps.reduce((sum, temp) => sum + temp, 0);
-return tot_temperature_in_celsius = fahrenheitTempsToCelsius.reduce((sum, temp) => sum + temp, 0) + celsiusTemps.reduce((sum, temp) => sum + temp, 0);
+// Total temperatures
+let tot_temperature_in_fahrenheit =
+  day1TempF + day2TempF + day3TempF + day4TempF + day5TempF +
+  day6TempF + day7TempF + day8TempF + day9TempF + day10TempF +
+  day11TempF + day12TempF + day13TempF + day14TempF + day15TempF +
+  day16TempF + day17TempF + day18TempF + day19TempF + day20TempF +
+  day21TempF + day22TempF + day23TempF + day24TempF + day25TempF +
+  day26TempF + day27TempF + day28TempF + day29TempF + day30TempF;
 
-// Calculate the average temperature in both fahrenheit and celsius by creating two variables
-let avg_temperature_in_fahrenheit = 0;
-let avg_temperature_in_celsius = 0;
+let tot_temperature_in_celsius =
+  day1TempC + day2TempC + day3TempC + day4TempC + day5TempC +
+  day6TempC + day7TempC + day8TempC + day9TempC + day10TempC +
+  day11TempC + day12TempC + day13TempC + day14TempC + day15TempC +
+  day16TempC + day17TempC + day18TempC + day19TempC + day20TempC +
+  day21TempC + day22TempC + day23TempC + day24TempC + day25TempC +
+  day26TempC + day27TempC + day28TempC + day29TempC + day30TempC;
 
-return avg_temperature_in_fahrenheit = tot_temperature_in_fahrenheit / (celsiusTemps.length + fahrenheitTemps.length);
-return avg_temperature_in_celsius = tot_temperature_in_celsius / (celsiusTemps.length + fahrenheitTemps.length);   
+// Average temperatures
+let avg_temperature_in_fahrenheit = tot_temperature_in_fahrenheit / 30;
+let avg_temperature_in_celsius = tot_temperature_in_celsius / 30;
 
-//console.log the results for your own inspection if you'd like
-console.log("Total temperature in Fahrenheit:", tot_temperature_in_fahrenheit);
-console.log("Total temperature in Celsius:", tot_temperature_in_celsius);
-console.log("Average temperature in Fahrenheit:", avg_temperature_in_fahrenheit);
-console.log("Average temperature in Celsius:", avg_temperature_in_celsius);
+console.log("Total in °F:", tot_temperature_in_fahrenheit);
+console.log("Total in °C:", tot_temperature_in_celsius);
+console.log("Average in °F:", avg_temperature_in_fahrenheit);
+console.log("Average in °C:", avg_temperature_in_celsius);
